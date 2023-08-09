@@ -304,7 +304,8 @@ switch (ENVIRONMENT)
 	}
 
 	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
-
+	
+	echo "pentil";
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE
