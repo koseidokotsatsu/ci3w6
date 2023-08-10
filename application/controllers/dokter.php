@@ -18,6 +18,7 @@ class Dokter extends CI_Controller
     function tambah()
     {
         $data['jadwal'] = $this->m_dokter->ambilJadwal();
+
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
         $this->load->view('templates/topbar');
