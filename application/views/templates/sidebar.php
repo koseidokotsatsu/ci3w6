@@ -30,7 +30,7 @@
                     <span class="hide-menu">MENU</span>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="#" aria-expanded="false">
+                    <a class="sidebar-link" href="<?= base_url(); ?>layanan" aria-expanded="false">
                         <span>
                             <i class="ti ti-article"></i>
                         </span>
@@ -38,7 +38,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="#" aria-expanded="false">
+                    <a class="sidebar-link" href="<?= base_url(); ?>dokter" aria-expanded="false">
                         <span>
                             <i class="ti ti-users"></i>
                         </span>
@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="#" aria-expanded="false">
+                    <a class="sidebar-link" href="<?= base_url(); ?>jadwal" aria-expanded="false">
                         <span>
                             <i class="ti ti-cards"></i>
                         </span>
@@ -54,7 +54,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="<?= base_url('pengguna') ?>" aria-expanded="false">
+                    <a class="sidebar-link" href="<?= base_url('pengguna'); ?>" aria-expanded="false">
                         <span>
                             <i class="ti ti-file-description"></i>
                         </span>
@@ -62,7 +62,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="#" aria-expanded="false">
+                    <a class="sidebar-link" href="<?= base_url('antrian'); ?>" aria-expanded="false">
                         <span>
                             <i class="ti ti-typography"></i>
                         </span>

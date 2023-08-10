@@ -7,20 +7,20 @@ class Pengguna extends CI_Controller
     public function index()
     {
         $data['pengguna'] = $this->m_pengguna->tampilkan_data();
-        $this->load->view('templates/header.php');
-        $this->load->view('templates/sidebar.php');
-        $this->load->view('templates/topbar.php');
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('templates/topbar');
         $this->load->view('pengguna/pengguna_data', $data);
-        $this->load->view('templates/footer.php');
+        $this->load->view('templates/footer');
     }
     function tambah()
     {
 
-        $this->load->view('templates/header.php');
-        $this->load->view('templates/sidebar.php');
-        $this->load->view('templates/topbar.php');
-        $this->load->view('pengguna/pengguna_form', );
-        $this->load->view('templates/footer.php');
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('templates/topbar');
+        $this->load->view('pengguna/pengguna_form',);
+        $this->load->view('templates/footer');
     }
     function insert()
     {
@@ -70,5 +70,4 @@ class Pengguna extends CI_Controller
         $this->m_pengguan->hapus_data($where);
         redirect('pengguan');
     }
-
 }
