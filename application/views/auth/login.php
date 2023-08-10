@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Modernize Free</title>
-    <link rel="shortcut icon" type="image/png" href="<?= base_url(); ?>assets/images/logos/favicon.png" />
+    <title>ClinicQ</title>
+    <link rel="shortcut icon" type="image/png" href="<?= base_url(); ?>assets/images/logos/q_logo.png" />
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/styles.min.css" />
 </head>
 
@@ -19,21 +19,21 @@
                         <div class="card mb-0">
                             <div class="card-body">
                                 <a href="<?= base_url(); ?>dashboard" class="text-nowrap logo-img text-center d-block py-3 w-100">
-                                    <img src="<?= base_url(); ?>assets/images/logos/dark-logo.svg" width="180" alt="">
+                                    <img src="<?= base_url(); ?>assets/images/logos/dark-logo.png" width="180" alt="">
                                 </a>
-                                <p class="text-center">Your Social Campaigns</p>
+                                <p class="text-center">Welcome Back To ClinicQ!</p>
                                 <form>
                                     <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Username</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <label for="username" class="form-label">username</label>
+                                        <input type="email" class="form-control" id="username" name="username" aria-describedby="emailHelp">
                                     </div>
                                     <div class="mb-4">
                                         <label for="password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="password">
+                                        <input type="password" class="form-control" id="password" name="password">
                                     </div>
                                     <a href="<?= base_url(); ?>dashboard" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign In</a>
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <p class="fs-4 mb-0 fw-bold">New to Modernize?</p>
+                                        <p class="fs-4 mb-0 fw-bold">Baru di ClinicQ?</p>
                                         <a class="text-primary fw-bold ms-2" href="<?= base_url(); ?>auth/register">Create an account</a>
                                     </div>
                                 </form>
