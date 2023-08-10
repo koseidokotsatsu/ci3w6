@@ -13,4 +13,16 @@ class Layanan extends CI_Controller
         $this->load->view('layanan/layanan_data', $data);
         $this->load->view('templates/footer');
     }
+    function tambah()
+    {
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('templates/topbar');
+        $this->load->view('layanan/layanan_form');
+        $this->load->view('templates/footer');
+    }
+    function insert()
+    {
+        $lay = $this->input->post('');
+    }
 }

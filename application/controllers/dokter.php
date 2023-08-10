@@ -13,4 +13,8 @@ class Dokter extends CI_Controller
         $this->load->view('dokter/dokter_data', $data);
         $this->load->view('templates/footer');
     }
+    function tambah()
+    {
+
+    }
 }
