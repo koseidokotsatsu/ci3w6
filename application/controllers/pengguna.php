@@ -6,7 +6,7 @@ class Pengguna extends CI_Controller
 {
     public function index()
     {
-        $data['pengguna'] = $this->m_pengguna->tampilkan_data();
+        $data['pengguna'] = $this->m_pengguna->tampilkan_data()->result();
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
         $this->load->view('templates/topbar');
@@ -15,7 +15,6 @@ class Pengguna extends CI_Controller
     }
     function tambah()
     {
-
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
         $this->load->view('templates/topbar');
@@ -50,7 +49,7 @@ class Pengguna extends CI_Controller
     }
     function update()
     {
-        $id = $this->input->post('id_pengguan');
+        $id = $this->input->post('id_pengguna');
         $np = $this->input->post('nama_pengguan');
         $j = $this->input->post('jenis_kelamin');
         $u = $this->input->post('umur');

@@ -24,34 +24,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="border-bottom-0">
-                                <h6 class="fw-semibold fs-4 mb-0">1</h6>
-                            </td>
-                            <td class="border-bottom-0">
-                                <h6 class="fw-semibold mb-1">Sunil Joshi</h6>
-                            </td>
-                            <td class="border-bottom-0">
-                                <h6 class="fw-semibold mb-1">Sunil Joshi</h6>
-                            </td>
-                            <td class="border-bottom-0">
-                                <div class="d-flex align-items-center gap-2">
-                                    <span class="badge bg-success rounded-3 fw-semibold">Low</span>
-                                </div>
-                            </td>
-                            <td class="border-bottom-0">
-                                <div class="d-flex align-items-center gap-2">
-                                    <span class="badge bg-success rounded-3 fw-semibold">Low</span>
-                                </div>
-                            </td>
-                            <td class="border-bottom-0 float-end">
-                                <div class="d-flex align-items-center gap-2">
-                                    <button class="btn btn-primary btn-sm rounded-5 fw-semibold">Edit</button>
-                                    <button class="btn btn-danger btn-sm rounded-5 fw-semibold">Hapus</button>
-                                </div>
-                            </td>
-
-                        </tr>
+                        <?php
+                        $no = 1;
+                        foreach ($jadwal as $d) : ?>
+                            <tr>
+                                <th scope="row"><?= $no++ ?></th>
+                                <td><?= $d['nama_dokter'] ?></td>
+                                <td><?= $d['spesialis'] ?></td>
+                                <td><?= $d['nama_jadwal'] ?></td>
+                                <td class="border-bottom-0 float-end">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <a href="#" class="btn btn-primary btn-sm rounded-5 fw-semibold">Edit</a>
+                                        <a href="#" class="btn btn-danger btn-sm rounded-5 fw-semibold">Delete</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>

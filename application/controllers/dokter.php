@@ -6,15 +6,13 @@ class Dokter extends CI_Controller
 {
     public function index()
     {
-        $data['dokter'] = $this->m_dokter->tampilkan_data();
+        $data['jadwal'] = $this->m_dokter->ambilJadwal();
+        $data['dokter'] = $this->db->get('dokter')->result_array();
+
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
         $this->load->view('templates/topbar');
         $this->load->view('dokter/dokter_data', $data);
         $this->load->view('templates/footer');
-    }
-    function tambah()
-    {
-
     }
 }
