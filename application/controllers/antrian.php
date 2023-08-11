@@ -62,7 +62,7 @@ class antrian extends CI_Controller
         $data = [
             'id_layanan' => $this->input->post('layanan'),
             'id_dokter' => $this->input->post('dokter'),
-            'tanggal_antrian' => $this->input->post('tanggal_antrian'),
+            'tanggal_antrian' => $this->input->post('tanggal'),
             'jam_antrian' => $this->input->post('jam_antrian'),
             'status' => 'dalam_antrian',
         ];

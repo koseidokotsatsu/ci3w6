@@ -1,7 +1,8 @@
 <div class="col-lg-12 d-flex align-items-stretch">
     <div class="card w-100">
         <div class="card-body p-4">
-            <h5 class="card-title fw-semibold mb-4">Data Antrian <a href="<?= base_url('antrian/tambah') ?>" class="btn btn-primary btn-sm float-end"><i class="ti ti-plus"></i>Tambah Data
+            <h5 class="card-title fw-semibold mb-4">Data Antrian <a href="<?= base_url('antrian/tambah') ?>"
+                    class="btn btn-primary btn-sm float-end"><i class="ti ti-plus"></i>Tambah Data
                     Antrian</a></h5>
             <div class="table-responsive">
                 <table class="table text-nowrap mb-0 align-middle">
@@ -25,14 +26,15 @@
                             <th>
                                 <h6 class="fw-semibold mb-0">Status</h6>
                             </th>
-                            <h6 class="fw-semibold mb-0 float-end">Aksi</h6>
+                            <th>
+                                <h6 class="fw-semibold mb-0 ">Aksi</h6>
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
                         $no = 1;
-                        foreach ($antrian as $antri) : ?>
+                        foreach ($antrian as $antri): ?>
                             <tr>
                                 <th scope="row">
                                     <?= $no++ ?>
@@ -52,14 +54,16 @@
                                 <td>
                                     <?= $antri->status; ?>
                                 </td>
-                                <td class="border-bottom-0 float-end">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <a href="<?= base_url('antrian/edit/') . $antri->id_antrian ?>" class="btn btn-primary btn-sm rounded-5 fw-semibold">Edit</a>
-                                        <a href="<?= base_url('antrian/hapus/') . $antri->id_antrian ?>" class="btn btn-danger btn-sm rounded-5 fw-semibold" onclick="return confirm('Yakin akan Menghapus data?')">Delete</a>
-                                    </div>
+                                <td>
+
+                                    <a href="<?= base_url('antrian/edit/') . $antri->id_antrian ?>"
+                                        class="btn btn-primary btn-sm rounded-5 fw-semibold">Edit</a>
+                                    <a href="<?= base_url('antrian/hapus/') . $antri->id_antrian ?>"
+                                        class="btn btn-danger btn-sm rounded-5 fw-semibold"
+                                        onclick="return confirm('Yakin akan Menghapus data?')">Delete</a>
                                 </td>
                             <?php endforeach; ?>
-                            </tr>
+                        </tr>
                     </tbody>
                 </table>
             </div>

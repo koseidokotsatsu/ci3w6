@@ -18,50 +18,44 @@ class Pengguna extends CI_Controller
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
         $this->load->view('templates/topbar');
-        $this->load->view('pengguna/pengguna_form',);
+        $this->load->view('pengguna/pengguna_form', );
         $this->load->view('templates/footer');
     }
     function insert()
     {
-        $np = $this->input->post('nama_pengguan');
-        $j = $this->input->post('jenis_kelamin');
-        $u = $this->input->post('umur');
-
         $data = [
-            'nama_pengguan' => $np,
-            'jenis_kelamin' => $j,
-            'umur' => $u
+            'nama_pengguna' => $this->input->post('nama'),
+            'email' => $this->input->post('email'),
+            'no_hp' => $this->input->post('telpon'),
+            'informasi' => $this->input->post('informasi')
         ];
-        $this->m_pengguan->insert_data($data);
-        redirect('pengguan');
+        $this->db->insert('pengguna', $data);
+        redirect('pengguna');
     }
     function edit($id)
     {
-        $data['title'] = 'Edit Data pengguan';
 
-        $where = ['id_pengguan' => $id];
-        $data['p'] = $this->m_pengguan->edit_data($where)->row_array();
+        $where = ['id_pengguna' => $id];
+        $data['pengguna'] = $this->m_pengguna->edit_data($where)->row_array();
 
-
-        $this->load->view('v_header', $data);
-        $this->load->view('pengguan/v_data_edit', $data);
-        $this->load->view('v_footer');
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('templates/topbar');
+        $this->load->view('pengguna/pengguna_edit', $data);
+        $this->load->view('templates/footer');
     }
     function update()
     {
-        $id = $this->input->post('id_pengguna');
-        $np = $this->input->post('nama_pengguan');
-        $j = $this->input->post('jenis_kelamin');
-        $u = $this->input->post('umur');
-
+        $id = $this->input->post('id');
         $data = [
-            'nama_pengguan' => $np,
-            'jenis_kelamin' => $j,
-            'umur' => $u
+            'nama_pengguna' => $this->input->post('nama'),
+            'email' => $this->input->post('email'),
+            'no_hp' => $this->input->post('telpon'),
+            'informasi' => $this->input->post('informasi')
         ];
-        $where = ['id_pengguan' => $id];
-        $this->m_pengguan->update_data($data, $where);
-        redirect('pengguan');
+        $where = ['id_pengguna' => $id];
+        $this->m_pengguna->update_data($data, $where);
+        redirect('pengguna');
     }
     function hapus($id)
     {

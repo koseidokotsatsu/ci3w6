@@ -10,26 +10,22 @@
                 </h5>
                 <div class="card">
                     <div class="card-body">
-                        <form>
+                        <form method="post" action="<?= base_url('pengguna/insert') ?>">
                             <div class="mb-3">
-                                <label for="" class="form-label">Nama Pengguna</label>
-                                <input type="text" class="form-control" id="">
+                                <label for="nama" class="form-label">Nama Pengguna</label>
+                                <input type="text" class="form-control" name="nama" id="nama">
                             </div>
                             <div class="mb-3">
-                                <label for="" class="form-label">Alamat</label>
-                                <input type="text" class="form-control" id="">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" name="email" id="email">
                             </div>
                             <div class="mb-3">
-                                <label for="" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="">
+                                <label for="telpon" class="form-label">No Telpon</label>
+                                <input type="text" class="form-control" name="telpon" id="telpon">
                             </div>
                             <div class="mb-3">
-                                <label for="" class="form-label">No Telpon</label>
-                                <input type="text" class="form-control" id="">
-                            </div>
-                            <div class="mb-3">
-                                <label for="" class="form-label">Informasi</label>
-                                <input type="text" class="form-control" id="">
+                                <label for="info" class="form-label">Informasi</label>
+                                <input type="text" class="form-control" name="informasi" id="info">
                             </div>
                             <button type="button" class="btn btn-warning float-center">Batal</button>
                             <button type="submit" class="btn btn-primary">Simpan</button>
