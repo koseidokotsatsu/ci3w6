@@ -16,8 +16,8 @@ class antrian extends CI_Controller
     }
     function tambah()
     {
-        $layanan = $this->m_layanan->tampilkan_layanan()->result();
-        $dokter = $this->m_dokter->tampilkan_data()->result();
+        $layanan = $this->m_layanan->tampilkan_data()->result();
+        $dokter = $this->db->get('dokter')->result();
         $data = [
             'layanan' => $layanan,
             'dokter' => $dokter,

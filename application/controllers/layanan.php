@@ -18,7 +18,7 @@ class Layanan extends CI_Controller
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
         $this->load->view('templates/topbar');
-        $this->load->view('layanan/layanan_form',);
+        $this->load->view('layanan/layanan_form', );
         $this->load->view('templates/footer');
     }
     function insert()
@@ -31,8 +31,8 @@ class Layanan extends CI_Controller
             $this->session->set_flashdata('pesan_layanan', '<div class="alert alert-danger" role="alert">Galat!</div>');
         } else {
             $data = [
-                'nama'       => $this->input->post('nama'),
-                'deskripsi'  => $this->input->post('deskripsi'),
+                'nama' => $this->input->post('nama'),
+                'deskripsi' => $this->input->post('deskripsi'),
             ];
 
             $this->db->insert('layanan', $data);
@@ -57,8 +57,8 @@ class Layanan extends CI_Controller
         $id = $this->input->post('id_layanan');
 
         $data = [
-            'nama'       => $this->input->post('nama'),
-            'deskripsi'  => $this->input->post('deskripsi'),
+            'nama' => $this->input->post('nama'),
+            'deskripsi' => $this->input->post('deskripsi'),
         ];
 
         $where = ['id_layanan' => $id];

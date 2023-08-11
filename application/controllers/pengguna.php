@@ -18,7 +18,7 @@ class Pengguna extends CI_Controller
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
         $this->load->view('templates/topbar');
-        $this->load->view('pengguna/pengguna_form',);
+        $this->load->view('pengguna/pengguna_form', );
         $this->load->view('templates/footer');
     }
     function insert()
