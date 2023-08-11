@@ -38,7 +38,7 @@
                                 <td><?= $l->deskripsi ?></td>
                                 <td class="border-bottom-0 float-end">
                                     <div class="d-flex align-items-center gap-2">
-                                        <a href="<?= base_url('layanan/edit'); ?>" class="btn btn-primary btn-sm rounded-5 fw-semibold">Edit</a>
+                                        <a href="<?= base_url('layanan/edit/') . $l->id_layanan; ?>" class="btn btn-primary btn-sm rounded-5 fw-semibold">Edit</a>
                                         <a href="#" class="btn btn-danger btn-sm rounded-5 fw-semibold">Delete</a>
                                     </div>
                                 </td>

@@ -15,29 +15,27 @@
                                 <label for="" class="form-label">layanan</label>
                                 <select name="layanan" id="layanan" class="form-control">
                                     <option value="">- pilih -</option>
-                                    <?php foreach ($layanan as $la): ?>
+                                    <?php foreach ($layanan as $la) : ?>
                                         <option value="<?= $la->id_layanan ?>"><?= $la->nama ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="" class="form-label">layanan</label>
-                                <select name="layanan" id="layanan" class="form-control">
+                                <label for="" class="form-label">dokter</label>
+                                <select name="dokter" id="dokter" class="form-control">
                                     <option value="">- pilih -</option>
-                                    <?php foreach ($dokter as $do): ?>
-                                        <option value="<?= $do->id_layanan ?>"><?= $do->nama_dokter ?></option>
+                                    <?php foreach ($dokter as $do) : ?>
+                                        <option value="<?= $do->id_dokter ?>"><?= $do->nama_dokter ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Tanggal Antrian</label>
-                                <input type="date" name="tanggal" class="form-control"
-                                    value="<?= $antrian->tanggal_antrian ?>">
+                                <input type="date" name="tanggal" class="form-control" value="<?= $antrian->tanggal_antrian ?>">
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Jam Anttrian</label>
-                                <input type="time" name="jam_antrian" class="form-control"
-                                    value="<?= $antrian->jam_antrian ?>">
+                                <input type="time" name="jam_antrian" class="form-control" value="<?= $antrian->jam_antrian ?>">
                             </div>
                             <button type="button" class="btn btn-warning float-center">Batal</button>
                             <button type="submit" class="btn btn-primary">Simpan</button>

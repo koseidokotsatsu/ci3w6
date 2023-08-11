@@ -28,7 +28,6 @@ class antrian extends CI_Controller
         $this->load->view('templates/topbar');
         $this->load->view('antrian/antrian_form', $data);
         $this->load->view('templates/footer');
-
     }
     function insert()
     {
@@ -47,26 +46,27 @@ class antrian extends CI_Controller
     {
         $where = ['id_antrian' => $id];
         $data['antrian'] = $this->m_antrian->edit($where)->row();
-        $data['layanan'] = $this->m_layanan->tampilkan_layanan()->result();
-        $data['dokter'] = $this->m_dokter->tampilkan_data()->result();
+        $data['layanan'] = $this->m_layanan->tampilkan_data()->result();
+        $data['dokter'] = $this->db->get('dokter')->result();
 
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
         $this->load->view('templates/topbar');
-        $this->load->view('antrian/antrian_form', $data);
+        $this->load->view('antrian/antrian_edit', $data);
         $this->load->view('templates/footer');
     }
     function update()
     {
         $id = $this->input->post('id');
+
         $data = [
             'id_layanan' => $this->input->post('layanan'),
             'id_dokter' => $this->input->post('dokter'),
             'tanggal_antrian' => $this->input->post('tanggal_antrian'),
             'jam_antrian' => $this->input->post('jam_antrian'),
             'status' => 'dalam_antrian',
-
         ];
+
         $where = ['id_antrian' => $id];
         $this->m_antrian->update_data($data, $where);
         redirect('antrian');

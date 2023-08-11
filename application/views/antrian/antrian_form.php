@@ -15,7 +15,7 @@
                                 <label for="" class="form-label">layanan</label>
                                 <select name="layanan" id="layanan" class="form-control">
                                     <option value="">- pilih -</option>
-                                    <?php foreach ($layanan as $la): ?>
+                                    <?php foreach ($layanan as $la) : ?>
                                         <option value="<?= $la->id_layanan ?>"><?= $la->nama ?></option>
                                     <?php endforeach; ?>
                                 </select>
@@ -24,7 +24,7 @@
                                 <label for="" class="form-label">dokter</label>
                                 <select name="dokter" id="dokter" class="form-control">
                                     <option value="">- pilih -</option>
-                                    <?php foreach ($dokter as $do): ?>
+                                    <?php foreach ($dokter as $do) : ?>
                                         <option value="<?= $do->id_dokter ?>"><?= $do->nama_dokter ?></option>
                                     <?php endforeach; ?>
                                 </select>
